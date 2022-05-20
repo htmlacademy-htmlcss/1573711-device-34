@@ -5,8 +5,36 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header class="page-header">
+        <img class="header-logo" src="" alt="Логотип Device">
+        <form class="header-search" action="https://echo.htmlacademy.ru/" method="POST">
+          <label class="visually-hidden" for="header-search">Поиск по сайту</label>
+          <input type="text" name="header-search" id="header-search" placeholder="Текст поиска">
+        </form>
+        <ul class="user-navigation-list">
+          <li class="user-navigation-item">
+            <a class="user-navigation-link" href="#">Войти</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="user-navigation-link" href="#">Сравнить</a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="user-navigation-link" href="#">Корзина</a>
+          </li>
+        </ul>
+        <a class="header-catalog" href="#">Каталог товаров</a>
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Доставка</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Гарантия</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Контакты</a>
+          </li>
+        </ul>
+    </header>
+    
   </body>
 </html>
