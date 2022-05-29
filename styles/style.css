@@ -46,6 +46,20 @@ body {
   background-color: #ffe17f;
 }
 
+.search-field {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.search-button {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
+
 .user-navigation-item {
   list-style: none;
 }
@@ -53,6 +67,10 @@ body {
 .user-navigation-link {
   text-decoration: none;
   color: #000000;
+}
+
+.user-navigation-exit {
+  opacity: 0.3;
 }
 
 .header-catalog {
