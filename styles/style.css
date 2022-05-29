@@ -42,6 +42,10 @@ body {
   color: #000000;
 }
 
+.page-header {
+  background-color: #ffe17f;
+}
+
 .user-navigation-item {
   list-style: none;
 }
