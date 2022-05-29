@@ -115,6 +115,11 @@ body {
   color: #000000;
 }
 
+.features-delivery {
+  font-size: 20px;
+  line-height: 23px;
+}
+
 .about-title,
 .contacts-title {
   font-family: "Raleway", "Arial", sans-serif;
@@ -192,11 +197,22 @@ body {
   color: #ffffff;
 }
 
+.inner-body {
+  color: #000000;
+}
+
+.main-inner {
+  background-color: #f0f0f0;
+}
+
+.inner-header {
+  background-color: #ffffff;
+}
+
 .inner-title {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   line-height: 50px;
-  color: #000000;
 }
 
 .breadcrumps-item {
@@ -208,5 +224,73 @@ body {
   line-height: 19px;
   text-decoration: none;
   color: #000000;
+
+}
+
+.filters-title,
+.cards-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.group-title {
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.checkbox-term,
+.radio-term {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.cards-wrapper {
+  background-color: #ffffff;
+}
+
+.cards-item {
+  list-style: none;
+}
+
+.cards-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.cards-subtitle {
+  line-height: 20px;
+  letter-spacing: -0.4px;
+  font-weight: 700;
+}
+
+.cards-price {
+  line-height: 21px;
+  font-weight: 400;
+  text-align: right;
+  color: #444444;
+}
+
+.cards-pagination {
+  background-color: #ebebeb;
+}
+
+.cards-pagination-item {
+  list-style: none;
+}
+
+.cards-pagination-link {
+  text-decoration: none;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.cards-button {
+  font-size: 16px;
+  line-height: 19px;
 }
 
