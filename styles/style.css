@@ -32,7 +32,17 @@ body {
   background-color: #ffffff;
 }
 
-.button {
+.navigation-link,
+.slider-link,
+.features-slider-button,
+.features-delivery,
+.about-button,
+.contacts-button,
+.subscription-button,
+.footer-navigation-link,
+.filters-button,
+.cards-button,
+.cards-pagination-button {
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 21px;
   letter-spacing: 3.6px;
