@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
-  <body>
+  <body class="inner-body">
+
+    <!-- Шапка -->
+
     <header class="page-header">
       <a class="header-link" href="index.html">
-        <img class="header-logo" src="/images/logo.svg" width="145" height="36" alt="Логотип Device.">
+        <img class="header-logo" src="images/logo.svg" width="145" height="36" alt="Логотип Device.">
       </a>
       <form class="header-search" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="header-search">Поиск по сайту</label>
@@ -18,7 +22,7 @@
           <a class="user-navigation-link" href="#">Коля Петухов</a>
         </li>
         <li class="user-navigation-item">
-          <a class="user-navigation-link" href="#">Выйти</a>
+          <a class="user-navigation-link user-navigation-exit" href="#">Выйти</a>
         </li>
         <li class="user-navigation-item">
           <a class="user-navigation-link" href="#">Сравнить</a>
@@ -29,7 +33,7 @@
       </ul>
       <a class="header-catalog" href="#">
         Каталог товаров
-        <img class="header-catalog-image" src="/images/catalog-expand.svg" width="50" height="50" alt="Развернуть каталог.">
+        <img class="header-catalog-image" src="images/catalog-expand.svg" width="50" height="50" alt="Развернуть каталог.">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
@@ -58,8 +62,11 @@
           </li>
         </ul>
       </header>
+
+      <!-- Фильтры -->
+
       <section class="filters">
-        <h2 class="filters-title">фильтр:</h2>
+        <h2 class="filters-title">Фильтр:</h2>
         <form class="filters-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="filters-group">
             <legend class="group-title">Цвет</legend>
@@ -98,70 +105,80 @@
           <button class="filters-button" type="button">Показать</button>
         </form>
       </section>
+
+      <!-- Карточки товаров -->
+
       <section class="cards">
-        <h3 class="cards-title">сортировка:</h3>
+        <h3 class="cards-title">Сортировка:</h3>
         <p class="cards-popular">Популярные </p>
-        <img class="cards-sort" src="/images/sort.svg" width="11" height="10" alt="Сортировка от меньшего к большему.">
-        <img class="cards-sort" src="/images/sort.svg" width="11" height="10" alt="Сортировка от большего к меньшему.">
-        <h2 class="visually-hidden">Товары</h2>
-        <ul class="cards-list">
-          <li class="cards-item">
-            <a class="cards-link" href="#">
-              <img class="cards-image" src="/images/product-cards/product-1.jpg" width="360" height="380" alt="">
-              <p class="cards-subtitle">Любительская селфи-палка</p>
-              <b class="cards-price">500 ₽</b>
-            </a>
-          </li>
-          <li class="cards-item">
-            <a class="cards-link" href="#">
-              <img class="cards-image" src="/images/product-cards/product-2.jpg" width="360" height="380" alt="">
-              <p class="cards-subtitle">Профессиональная селфи-палка</p>
-              <b class="cards-price">1 500 ₽</b>
-            </a>
-          </li><li class="cards-item">
-            <a class="cards-link" href="#">
-              <img class="cards-image" src="/images/product-cards/product-3.jpg" width="360" height="380" alt="">
-              <p class="cards-subtitle">Непотопляемая
-                селфи-палка</p>
-              <b class="cards-price">2 500 ₽</b>
-            </a>
-          </li>
-          <li class="cards-item">
-            <a class="cards-link" href="#">
-              <img class="cards-image" src="/images/product-cards/product-4.jpg" width="360" height="380" alt="">
-              <p class="cards-subtitle">Селфи-палка «Следуй за мной»</p>
-              <b class="cards-price">1 500 ₽</b>
-            </a>
-          </li>
-        </ul>
-        <button class="cards-button">Загрузить ещё</button>
-        <ul class="cards-pagination">
-          <li class="cards-pagination-item">
-            <a class="cards-pagination-link cards-pagination-disabled">Назад</a>
-          </li>
-          <li class="cards-pagination-item">
-            <a class="cards-pagination-link cards-pagination-current">1</a>
-          </li>
-          <li class="cards-pagination-item">
-            <a class="cards-pagination-link" href="#">2</a>
-          </li>
-          <li class="cards-pagination-item">
-            <a class="cards-pagination-link" href="#">3</a>
-          </li>
-          <li class="cards-pagination-item">
-            <a class="cards-pagination-link">...</a>
-          </li>
-          <li class="cards-pagination-item">
-            <a class="cards-pagination-link" href="#">15</a>
-          </li>
-          <li class="cards-pagination-item">
-            <a class="cards-pagination-link" href="#">Вперёд</a>
-          </li>
-        </ul>
+        <img class="cards-sort" src="images/sort.svg" width="11" height="10" alt="Сортировка от меньшего к большему.">
+        <img class="cards-sort" src="images/sort.svg" width="11" height="10" alt="Сортировка от большего к меньшему.">
+        <div class="cards-wrapper">
+          <h2 class="visually-hidden">Товары</h2>
+          <ul class="cards-list">
+            <li class="cards-item">
+              <a class="cards-link" href="#">
+                <img class="cards-image" src="images/product-cards/product-1.jpg" width="360" height="380" alt="">
+                <p class="cards-subtitle">Любительская селфи-палка</p>
+                <b class="cards-price">500 ₽</b>
+              </a>
+            </li>
+            <li class="cards-item">
+              <a class="cards-link" href="#">
+                <img class="cards-image" src="images/product-cards/product-2.jpg" width="360" height="380" alt="">
+                <p class="cards-subtitle">Профессиональная селфи-палка</p>
+                <b class="cards-price">1 500 ₽</b>
+              </a>
+            </li><li class="cards-item">
+              <a class="cards-link" href="#">
+                <img class="cards-image" src="images/product-cards/product-3.jpg" width="360" height="380" alt="">
+                <p class="cards-subtitle">Непотопляемая
+                  селфи-палка</p>
+                <b class="cards-price">2 500 ₽</b>
+              </a>
+            </li>
+            <li class="cards-item">
+              <a class="cards-link" href="#">
+                <img class="cards-image" src="images/product-cards/product-4.jpg" width="360" height="380" alt="">
+                <p class="cards-subtitle">Селфи-палка «Следуй за мной»</p>
+                <b class="cards-price">1 500 ₽</b>
+              </a>
+            </li>
+          </ul>
+          <button class="cards-button">Загрузить ещё</button>
+          <ul class="cards-pagination">
+            <li class="cards-pagination-item">
+              <a class="cards-pagination-button cards-pagination-disabled">Назад</a>
+            </li>
+            <li class="cards-pagination-item">
+              <a class="cards-pagination-link cards-pagination-current">1</a>
+            </li>
+            <li class="cards-pagination-item">
+              <a class="cards-pagination-link" href="#">2</a>
+            </li>
+            <li class="cards-pagination-item">
+              <a class="cards-pagination-link" href="#">3</a>
+            </li>
+            <li class="cards-pagination-item">
+              <a class="cards-pagination-link">...</a>
+            </li>
+            <li class="cards-pagination-item">
+              <a class="cards-pagination-link" href="#">15</a>
+            </li>
+            <li class="cards-pagination-item">
+              <a class="cards-pagination-button" href="#">Вперёд</a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
+
+    <!-- Подвал -->
+
     <footer class="page-footer">
-      <img class="footer-logo" src="/images/logo.svg" width="145" height="36" alt="Логотип Девайс.">
+      <a class="footer-link" href="index.html">
+        <img class="footer-logo" src="images/logo.svg" width="145" height="36" alt="Логотип Девайс.">
+      </a>
       <address class="footer-adress">Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
       <ul class="footer-navigation-list">
         <li class="footer-navigation-item">
@@ -193,7 +210,7 @@
         </li>
       </ul>
       <a class="html-academy-link" href="https://htmlacademy.ru/">
-        <img class="html-academy-logo" src="/images/html-academy-logo.svg" width="115" height="33" alt="Логотип HTML Academy.">
+        <img class="html-academy-logo" src="images/html-academy-logo.svg" width="115" height="33" alt="Логотип HTML Academy.">
       </a>
     </footer>
   </body>
