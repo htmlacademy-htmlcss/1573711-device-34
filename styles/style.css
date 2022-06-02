@@ -415,10 +415,20 @@ body {
   background-color: #ffffff;
 }
 
+.inner-header-wrapper {
+  width: 1040px;
+  margin: 0 auto;
+}
+
 .inner-title {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   line-height: 50px;
+}
+
+.breadcrumps {
+  margin: 0;
+  padding: 0;
 }
 
 .breadcrumps-item {
@@ -430,7 +440,16 @@ body {
   line-height: 19px;
   text-decoration: none;
   color: #000000;
+}
 
+.inner-index-container {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.filters {
+  width: 320px;
 }
 
 .filters-title,
@@ -457,6 +476,10 @@ body {
 
 .cards-wrapper {
   background-color: #ffffff;
+}
+
+.cards {
+  width: 840px;
 }
 
 .cards-item {
