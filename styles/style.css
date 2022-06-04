@@ -107,7 +107,7 @@ body {
 }
 
 .user-navigation-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .user-navigation-link {
@@ -137,7 +137,7 @@ body {
 }
 
 .navigation-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .white-container {
@@ -171,6 +171,24 @@ body {
   color: #000000;
 }
 
+.slider-arrows {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-arrow {
+  list-style-type: none;
+}
+
+.slider-paginator-list {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-paginator-item {
+  list-style-type: none;
+}
+
 .products-list {
   display: flex;
   justify-content: space-between;
@@ -180,7 +198,7 @@ body {
 
 .products-item {
   width: 160px;
-  list-style: none;
+  list-style-type: none;
 }
 
 .products-link {
@@ -196,6 +214,7 @@ body {
 }
 
 .features-descriptor {
+  margin: 0;
   font-size: 36px;
 }
 
@@ -215,6 +234,10 @@ body {
   padding: 0;
 }
 
+.features-slider-item {
+  list-style-type: none;
+}
+
 .features-list {
   width: 695px;
   margin: 0;
@@ -224,15 +247,11 @@ body {
 }
 
 .features-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .features-text {
   width: 475px;
-}
-
-.features-slider-item {
-  list-style: none;
 }
 
 .features-title {
@@ -271,12 +290,13 @@ body {
 }
 
 .about-list {
+  margin: 0;
   padding: 0;
 }
 
 .about-item {
   padding-left: 34px;
-  list-style: none;
+  list-style-type: none;
   line-height: 20px;
   font-weight: 700;
   color: #000000;
@@ -296,11 +316,12 @@ body {
 }
 
 .contacts-list {
+  margin: 0;
   padding: 0;
 }
 
 .contacts-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .contact-tel {
@@ -371,11 +392,12 @@ body {
 
 .footer-navigation-list {
   width: 445px;
+  margin: 0;
   padding: 0;
 }
 
 .footer-navigation-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .footer-navigation-link {
@@ -391,12 +413,13 @@ body {
 
 .footer-social {
   width: 150px;
+  margin: 0;
   margin-left: 505px;
   padding: 0;
 }
 
 .social-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .social-link {
@@ -432,7 +455,7 @@ body {
 }
 
 .breadcrumps-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .breadcrumps-link {
@@ -482,8 +505,13 @@ body {
   width: 840px;
 }
 
+.cards-list {
+  margin: 0;
+  padding: 0;
+}
+
 .cards-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .cards-link {
@@ -505,11 +533,13 @@ body {
 }
 
 .cards-pagination {
+  margin: 0;
+  padding: 0;
   background-color: #ebebeb;
 }
 
 .cards-pagination-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .cards-pagination-link {
