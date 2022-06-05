@@ -22,8 +22,17 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -32,10 +41,14 @@ body {
   background-color: #ffffff;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .navigation-link,
 .slider-link,
 .features-slider-button,
-.features-delivery,
+.delivery-link,
 .about-button,
 .contacts-button,
 .subscription-button,
@@ -53,7 +66,24 @@ body {
 }
 
 .page-header {
+  width: 1160px;
+  margin: 0 auto;
   background-color: #ffe17f;
+}
+
+.header-container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.header-user-container,
+.page-navigation-container {
+  display: flex;
+
+}
+
+.header-search {
+  width: 520px;
 }
 
 .search-field {
@@ -70,8 +100,14 @@ body {
   color: #000000;
 }
 
+.user-navigation-list {
+  width: 500px;
+  margin: 0;
+  padding: 0;
+}
+
 .user-navigation-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .user-navigation-link {
@@ -84,6 +120,7 @@ body {
 }
 
 .header-catalog {
+  width: 295px;
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 21px;
   text-transform: uppercase;
@@ -92,11 +129,33 @@ body {
   color: #000000;
 }
 
+.navigation-list {
+  width: 640px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
 .navigation-item {
-  list-style: none;
+  list-style-type: none;
+}
+
+.white-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.slider-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-wrapper {
+  width: 560px;
 }
 
 .slider-number {
+  margin: 0;
   font-size: 180px;
   line-height: 180px;
   font-weight: 700;
@@ -112,20 +171,34 @@ body {
   color: #000000;
 }
 
-.features {
-  background-color: #f0f0f0;
+.slider-arrows {
+  margin: 0;
+  padding: 0;
 }
 
-.features-term {
-  font-size: 16px;
+.slider-arrow {
+  list-style-type: none;
 }
 
-.features-descriptor {
-  font-size: 36px;
+.slider-paginator-list {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-paginator-item {
+  list-style-type: none;
+}
+
+.products-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .products-item {
-  list-style: none;
+  width: 160px;
+  list-style-type: none;
 }
 
 .products-link {
@@ -136,8 +209,49 @@ body {
   color: #000000;
 }
 
+.features-term {
+  font-size: 16px;
+}
+
+.features-descriptor {
+  margin: 0;
+  font-size: 36px;
+}
+
+.features {
+  background-color: #f0f0f0;
+}
+
+.features-container {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.features-slider {
+  width: 287px;
+  margin: 0;
+  padding: 0;
+}
+
 .features-slider-item {
-  list-style: none;
+  list-style-type: none;
+}
+
+.features-list {
+  width: 695px;
+  margin: 0;
+  margin-right: 63px;
+  margin-left: 116px;
+  padding: 0;
+}
+
+.features-item {
+  list-style-type: none;
+}
+
+.features-text {
+  width: 475px;
 }
 
 .features-title {
@@ -147,9 +261,24 @@ body {
   color: #000000;
 }
 
-.features-delivery {
+.delivery {
+  background-color: #f0f0f0;
+}
+
+.delivery-link {
+  display: block;
   font-size: 20px;
   line-height: 23px;
+  text-align: center;
+}
+
+.index-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  width: 520px;
 }
 
 .about-title,
@@ -160,10 +289,21 @@ body {
   color: #000000;
 }
 
+.about-list {
+  margin: 0;
+  padding: 0;
+}
+
 .about-item {
+  padding-left: 34px;
+  list-style-type: none;
   line-height: 20px;
   font-weight: 700;
   color: #000000;
+}
+
+.contacts {
+  width: 532px;
 }
 
 .contacts-subtitle {
@@ -175,6 +315,15 @@ body {
   font-style: normal;
 }
 
+.contacts-list {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts-item {
+  list-style-type: none;
+}
+
 .contact-tel {
   color: #444444;
 }
@@ -183,11 +332,30 @@ body {
   background-color: #f0f0f0;
 }
 
+.subscription-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.subscription-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .subscription-title {
+  width: 350px;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   line-height: 50px;
   color: #000000;
+}
+
+.subscription-descriptor {
+  width: 560px;
+}
+
+.subscription-form {
+  width: 810px;
 }
 
 .subscription-email {
@@ -196,19 +364,40 @@ body {
   opacity: 0.5;
 }
 
+.subscription-info {
+  width: 160px;
+}
+
 .page-footer {
   background-color: #444444;
   color: #ffffff;
 }
 
+.footer-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .footer-adress {
+  width: 240px;
   font-size: 16px;
   line-height: 20px;
   font-style: normal;
 }
 
+.footer-navigation-list {
+  width: 445px;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-navigation-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .footer-navigation-link {
@@ -216,13 +405,21 @@ body {
 }
 
 .footer-tel {
+  width: 175px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
 }
 
+.footer-social {
+  width: 150px;
+  margin: 0;
+  margin-left: 505px;
+  padding: 0;
+}
+
 .social-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .social-link {
@@ -241,14 +438,24 @@ body {
   background-color: #ffffff;
 }
 
+.inner-header-wrapper {
+  width: 1040px;
+  margin: 0 auto;
+}
+
 .inner-title {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
+.breadcrumps {
+  margin: 0;
+  padding: 0;
+}
+
 .breadcrumps-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .breadcrumps-link {
@@ -256,7 +463,16 @@ body {
   line-height: 19px;
   text-decoration: none;
   color: #000000;
+}
 
+.inner-index-container {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.filters {
+  width: 320px;
 }
 
 .filters-title,
@@ -285,8 +501,17 @@ body {
   background-color: #ffffff;
 }
 
+.cards {
+  width: 840px;
+}
+
+.cards-list {
+  margin: 0;
+  padding: 0;
+}
+
 .cards-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .cards-link {
@@ -308,11 +533,13 @@ body {
 }
 
 .cards-pagination {
+  margin: 0;
+  padding: 0;
   background-color: #ebebeb;
 }
 
 .cards-pagination-item {
-  list-style: none;
+  list-style-type: none;
 }
 
 .cards-pagination-link {
