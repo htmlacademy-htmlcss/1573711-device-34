@@ -136,6 +136,10 @@ body {
 }
 
 .user-navigation-item:first-child {
+  margin-left: 0;
+}
+
+.user-navigation-item:first-child {
   margin-right: auto;
 }
 
@@ -582,6 +586,7 @@ body {
 }
 
 .inner-header {
+  padding: 35px 0;
   background-color: #ffffff;
 }
 
@@ -591,18 +596,27 @@ body {
 }
 
 .inner-title {
+  margin: 0;
+  margin-bottom: 16px;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   line-height: 50px;
 }
 
 .breadcrumps {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
 
 .breadcrumps-item {
+  margin-right: 36px;
   list-style-type: none;
+}
+
+.breadcrumps-item:last-child {
+  margin-right: 0;
 }
 
 .breadcrumps-link {
@@ -614,6 +628,7 @@ body {
 
 .inner-index-container {
   width: 1160px;
+  padding-top: 25px;
   margin: 0 auto;
   display: flex;
 }
@@ -626,10 +641,15 @@ body {
 .cards-title {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 30px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.filters-title {
+  margin: 0;
+  margin-bottom: 60px;
 }
 
 .group-title {
@@ -644,17 +664,37 @@ body {
   line-height: 19px;
 }
 
-.cards-wrapper {
-  background-color: #ffffff;
+.sort-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 40px 25px;
 }
 
 .cards {
   width: 840px;
 }
 
+.cards-title {
+  margin: 0;
+}
+
+.cards-popular {
+  margin: 0;
+}
+
+.cards-sort {
+  margin: 0;
+}
+
+.cards-wrapper {
+  padding-bottom: 78px;
+  background-color: #ffffff;
+}
+
 .cards-list {
   margin: 0;
-  padding: 0;
+  padding: 70px 40px 44px;
 }
 
 .cards-item {
@@ -666,7 +706,13 @@ body {
   color: #000000;
 }
 
+.cards-image {
+  display: block;
+  margin-bottom: 32px;
+}
+
 .cards-subtitle {
+  margin: 0;
   line-height: 20px;
   letter-spacing: -0.4px;
   font-weight: 700;
@@ -679,10 +725,27 @@ body {
   color: #444444;
 }
 
+.cards-button {
+  display: inline-block;
+  margin: 0 40px 44px;
+  padding: 18px;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: #ffffff;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 40px;
+  padding: 25px;
+  background-color: #ebebeb;
+}
+
 .cards-pagination {
   margin: 0;
-  padding: 0;
-  background-color: #ebebeb;
+  display: flex;
 }
 
 .cards-pagination-item {
@@ -690,13 +753,10 @@ body {
 }
 
 .cards-pagination-link {
+  padding: 10px 15px;
   text-decoration: none;
   color: #444444;
   opacity: 0.3;
 }
 
-.cards-button {
-  font-size: 16px;
-  line-height: 19px;
-}
 
