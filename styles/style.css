@@ -137,9 +137,6 @@ body {
 
 .user-navigation-item:first-child {
   margin-left: 0;
-}
-
-.user-navigation-item:first-child {
   margin-right: auto;
 }
 
@@ -675,14 +672,8 @@ body {
   width: 840px;
 }
 
-.cards-title {
-  margin: 0;
-}
-
-.cards-popular {
-  margin: 0;
-}
-
+.cards-title,
+.cards-popular,
 .cards-sort {
   margin: 0;
 }
