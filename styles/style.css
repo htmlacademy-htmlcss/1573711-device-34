@@ -69,7 +69,7 @@ body {
 .cards-pagination-button {
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 21px;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -157,7 +157,7 @@ body {
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 21px;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 0.2em;
   text-decoration: none;
   color: #000000;
 }
@@ -289,7 +289,7 @@ body {
 .products-link {
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 24px;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.02em;
   text-decoration: none;
   color: #000000;
 }
@@ -639,7 +639,7 @@ body {
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 16px;
   line-height: 30px;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -652,7 +652,7 @@ body {
 .group-title {
   line-height: 20px;
   font-weight: 700;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.02em;
 }
 
 .checkbox-term,
@@ -705,7 +705,7 @@ body {
 .cards-subtitle {
   margin: 0;
   line-height: 20px;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.02em;
   font-weight: 700;
 }
 
@@ -749,5 +749,3 @@ body {
   color: #444444;
   opacity: 0.3;
 }
-
-
