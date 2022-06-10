@@ -146,6 +146,17 @@ body {
   color: #000000;
 }
 
+.user-navigation-link:last-of-type {
+  padding-left: 0;
+}
+
+.user-navigation-number {
+  margin-right: 22px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
 .user-navigation-exit {
   opacity: 0.3;
 }
@@ -369,6 +380,7 @@ body {
   padding: 40px 125px;
   font-size: 20px;
   line-height: 23px;
+  letter-spacing: 0.2em;
   text-align: center;
 }
 
@@ -684,12 +696,19 @@ body {
 }
 
 .cards-list {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  gap: 44px 40px;
   margin: 0;
   padding: 70px 40px 44px;
 }
 
 .cards-item {
   list-style-type: none;
+}
+
+.cards-image {
+  object-fit: contain;
 }
 
 .cards-link {
@@ -702,7 +721,13 @@ body {
   margin-bottom: 32px;
 }
 
+.card-link-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cards-subtitle {
+  max-width: 226px;
   margin: 0;
   line-height: 20px;
   letter-spacing: -0.02em;
