@@ -123,10 +123,14 @@
         <!-- Карточки товаров -->
 
         <section class="cards">
-          <h3 class="cards-title">Сортировка:</h3>
-          <p class="cards-popular">Популярные </p>
-          <img class="cards-sort" src="images/sort.svg" width="11" height="10" alt="Сортировка от меньшего к большему.">
-          <img class="cards-sort" src="images/sort.svg" width="11" height="10" alt="Сортировка от большего к меньшему.">
+          <div class="sort-wrapper">
+            <h3 class="cards-title">Сортировка:</h3>
+            <p class="cards-popular">Популярные </p>
+            <p class="cards-sort">
+              <img class="cards-sort" src="images/sort.svg" width="11" height="10" alt="Сортировка от меньшего к большему.">
+              <img class="cards-sort" src="images/sort.svg" width="11" height="10" alt="Сортировка от большего к меньшему.">
+            </p>
+          </div>
           <div class="cards-wrapper">
             <h2 class="visually-hidden">Товары</h2>
             <ul class="cards-list">
@@ -160,29 +164,27 @@
               </li>
             </ul>
             <button class="cards-button">Загрузить ещё</button>
-            <ul class="cards-pagination">
-              <li class="cards-pagination-item">
-                <a class="cards-pagination-button cards-pagination-disabled">Назад</a>
-              </li>
-              <li class="cards-pagination-item">
-                <a class="cards-pagination-link cards-pagination-current">1</a>
-              </li>
-              <li class="cards-pagination-item">
-                <a class="cards-pagination-link" href="#">2</a>
-              </li>
-              <li class="cards-pagination-item">
-                <a class="cards-pagination-link" href="#">3</a>
-              </li>
-              <li class="cards-pagination-item">
-                <a class="cards-pagination-link">...</a>
-              </li>
-              <li class="cards-pagination-item">
-                <a class="cards-pagination-link" href="#">15</a>
-              </li>
-              <li class="cards-pagination-item">
-                <a class="cards-pagination-button" href="#">Вперёд</a>
-              </li>
-            </ul>
+            <div class="pagination-wrapper">
+              <a class="cards-pagination-button cards-pagination-disabled">Назад</a>
+              <ul class="cards-pagination">
+                <li class="cards-pagination-item">
+                  <a class="cards-pagination-link cards-pagination-current">1</a>
+                </li>
+                <li class="cards-pagination-item">
+                  <a class="cards-pagination-link" href="#">2</a>
+                </li>
+                <li class="cards-pagination-item">
+                  <a class="cards-pagination-link" href="#">3</a>
+                </li>
+                <li class="cards-pagination-item">
+                  <a class="cards-pagination-link">...</a>
+                </li>
+                <li class="cards-pagination-item">
+                  <a class="cards-pagination-link" href="#">15</a>
+                </li>
+              </ul>
+              <a class="cards-pagination-button" href="#">Вперёд</a>
+            </div>
           </div>
         </section>
       </div>
