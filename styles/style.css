@@ -80,6 +80,7 @@ body {
   width: 1160px;
   margin: 0 auto;
   background-color: #ffe17f;
+  z-index: -1;
 }
 
 .header-container {
@@ -124,6 +125,7 @@ body {
 .user-navigation-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   width: 500px;
   margin: 0;
   margin-left: auto;
@@ -141,20 +143,42 @@ body {
 }
 
 .user-navigation-link {
+  position: relative;
   padding-left: 22px;
   text-decoration: none;
   color: #000000;
 }
 
-.user-navigation-link:last-of-type {
+.user-navigation-item:first-child .user-navigation-link,
+.user-navigation-item:last-child .user-navigation-link {
   padding-left: 0;
 }
 
+
+.user-navigation-sign {
+  margin-right: 13px;
+}
+
+.user-navigation-change {
+  margin-right: 10px;
+}
+
+.user-navigation-card {
+  position: absolute;
+  top: 2px;
+  left: 15px;
+  z-index: -1;
+}
+
 .user-navigation-number {
+  display: inline-block;
   margin-right: 22px;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 21px;
   text-align: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 21px;
 }
 
 .user-navigation-exit {
