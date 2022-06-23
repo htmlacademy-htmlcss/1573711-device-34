@@ -28,6 +28,7 @@ html {
 }
 
 body {
+  min-width: 1440px;
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -396,13 +397,15 @@ opacity: 0.3;
   display: inline-block;
   margin-bottom: 50px;
   padding: 10px 38px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffe16f 40%, #ffe16f 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(rgba(255, 255, 255, 0) 40%, #ffe16f 40%, #ffe16f 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
   cursor: pointer;
+	background-position: center;
+	background-size: 100% 100%;
+	transition: background-size 0.2s ease;
 }
 
 .slider-link:hover {
-  transition: all 0.3s ease-in-out;
-  background-color: #ffe16c;
+  background-size: 100% 500%;
 }
 
 .slider-link:active {
@@ -415,6 +418,20 @@ opacity: 0.3;
 
 .slider-arrow {
   list-style-type: none;
+}
+
+.slider-button {
+  position: absolute;
+}
+
+.slider-prev {
+  top: 61px;
+  left: 30px;
+}
+
+.slider-next {
+  top: 61px;
+  left: 540px;
 }
 
 .slider-button:hover {
@@ -434,6 +451,9 @@ opacity: 0.3;
 }
 
 .slider-paginator-list {
+  position: absolute;
+  top: 225px;
+  right: 0;
   display: flex;
   width: 76px;
   justify-content: space-between;
@@ -528,12 +548,25 @@ opacity: 0.3;
 }
 
 .product-image {
-  display: block;
+  object-fit: none;
   margin-bottom: 32px;
+  background-color: #ffe17f;
+}
+
+.products-item:nth-child(2) .product-image {
+
+}
+
+.products-link:hover .product-image {
+  background-color: #ffc700;
+}
+
+.products-link:active {
+  opacity: 0.3;
 }
 
 .features {
-  background: linear-gradient(to bottom, #ffffff 120px, #f0f0f0 120px);
+  background: linear-gradient(to bottom, #ffffff 102px, #f0f0f0 102px);
   background-color: #f0f0f0;
 }
 
@@ -578,10 +611,13 @@ opacity: 0.3;
   padding: 10px 20px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffe16f 40%, #ffe16f 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
   cursor: pointer;
+  background-position: center;
+	background-size: 100% 100%;
+	transition: background-size 0.2s ease;
 }
 
 .features-slider-link:hover {
-  background-color: #ffe16f;
+  background-size: 100% 500%;
 }
 
 .features-slider-link:active {
@@ -772,11 +808,14 @@ opacity: 0.3;
   display: inline-block;
   padding: 10px 25px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffe16f 40%, #ffe16f 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background-position: center;
+	background-size: 100% 100%;
+	transition: background-size 0.2s ease;
 }
 
 .about-button:hover,
 .contacts-button:hover {
-  background: #ffe16f;
+  background-size: 100% 500%;
 }
 
 .about-button:active,
@@ -822,6 +861,9 @@ opacity: 0.3;
   display: inline-block;
   padding: 10px 34px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffe16f 40%, #ffe16f 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  background-position: center;
+	background-size: 100% 100%;
+	transition: background-size 0.2s ease;
 }
 
 .subscription {
@@ -1270,10 +1312,6 @@ opacity: 0.3;
   opacity: 0.3;
 }
 
-.cards-item:active .card-item-button {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffc700 40%, #ffc700 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
-}
-
 .cards-item:focus {
   outline: 2px solid #af4fff;
 }
@@ -1324,7 +1362,20 @@ opacity: 0.3;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffe16f 40%, #ffe16f 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
   border: none;
   opacity: 0;
+  cursor: pointer;
+  background-position: center;
+	background-size: 100% 100%;
+	transition: background-size 0.2s ease;
 }
+
+.card-item-button:hover {
+  background-size: 100% 500%;
+}
+
+.card-item-button:active {
+  background: #ffc700;
+}
+
 
 .cards-button {
   display: block;
