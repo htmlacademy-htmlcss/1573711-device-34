@@ -215,6 +215,7 @@ body {
 
 .user-navigation-link:active {
   opacity: 0.3;
+  outline: 3px solid #af4fff;
 }
 
 .user-navigation-link :focus {
@@ -551,10 +552,6 @@ opacity: 0.3;
   object-fit: none;
   margin-bottom: 32px;
   background-color: #ffe17f;
-}
-
-.products-item:nth-child(2) .product-image {
-
 }
 
 .products-link:hover .product-image {
@@ -1300,16 +1297,8 @@ opacity: 0.3;
   list-style-type: none;
 }
 
-.cards-link:hover {
-  opacity: 0.6;
-}
-
 .cards-item:hover .card-item-button {
   opacity: 1;
-}
-
-.cards-link:active {
-  opacity: 0.3;
 }
 
 .cards-item:focus {
@@ -1323,8 +1312,30 @@ opacity: 0.3;
 }
 
 .cards-link {
+  display: block;
+  position: relative;
   text-decoration: none;
   color: #000000;
+}
+
+.cards-link:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.cards-link:active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .card-link-wrapper {
