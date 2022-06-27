@@ -197,6 +197,11 @@ body {
   list-style-type: none;
 }
 
+.user-navigation-item:focus,
+.user-navigation-item:focus-visible {
+  outline: 3px solid #af4fff;
+}
+
 .user-navigation-item:first-child {
   margin-left: 0;
   margin-right: auto;
@@ -218,7 +223,7 @@ body {
   outline: 3px solid #af4fff;
 }
 
-.user-navigation-link :focus {
+.user-navigation-link:focus {
   outline: 3px solid #af4fff;
 }
 
@@ -241,6 +246,9 @@ body {
   margin: 0;
   z-index: 1;
 }
+.user-navigation-wrapper:focus {
+  outline: 3px solid #af4fff;
+}
 
 .user-navigation-card {
   position: absolute;
@@ -261,7 +269,7 @@ body {
 }
 
 .user-navigation-exit {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .header-catalog {
@@ -319,7 +327,10 @@ body {
 }
 
 .navigation-link:active {
-opacity: 0.3;
+  opacity: 0.3;
+}
+.navigation-link:focus {
+  outline: 2px solid #af4fff;
 }
 
 .navigation-item:not(:last-child) {
@@ -541,10 +552,15 @@ opacity: 0.3;
 }
 
 .products-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-text {
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 24px;
   letter-spacing: -0.02em;
-  text-decoration: none;
   color: #000000;
 }
 
@@ -560,6 +576,10 @@ opacity: 0.3;
 
 .products-link:active {
   opacity: 0.3;
+}
+
+.products-link:focus {
+  outline: 2px solid #af4fff;
 }
 
 .features {
@@ -623,6 +643,8 @@ opacity: 0.3;
 
 .features-slider-link:focus {
   outline: 2px solid #af4fff;
+  width: 100%;
+  text-align: left;
 }
 
 .features-slider-item-current {
@@ -820,6 +842,11 @@ opacity: 0.3;
   background: #ffcc33;
 }
 
+.about-button:focus,
+.contacts-button:focus {
+  outline: 2px solid #af4fff;
+}
+
 .contacts {
   position: relative;
   width: 532px;
@@ -852,6 +879,18 @@ opacity: 0.3;
 
 .contact-tel {
   color: #444444;
+}
+
+.contact-tel:hover {
+  opacity: 0.6;
+}
+
+.contact-tel:active {
+  opacity: 0.3;
+}
+
+.contact-tel:focus {
+  outline: 2px solid #af4fff;
 }
 
 .contacts-button {
@@ -1088,7 +1127,7 @@ opacity: 0.3;
   fill-opacity: 0.3;
 }
 
-.slider-link:focus {
+.social-link:focus {
   outline: 2px solid #af4fff;
 }
 
@@ -1338,6 +1377,10 @@ opacity: 0.3;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+.cards-link:focus {
+  outline: 2px solid #af4fff;
+}
+
 .card-link-wrapper {
   display: flex;
   justify-content: space-between;
@@ -1387,6 +1430,10 @@ opacity: 0.3;
   background: #ffc700;
 }
 
+.card-item-button:focus {
+  opacity: 1;
+  outline: 2px solid #af4fff;
+}
 
 .cards-button {
   display: block;
