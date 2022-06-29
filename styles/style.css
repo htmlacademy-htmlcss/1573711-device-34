@@ -144,10 +144,16 @@ body {
 }
 
 .search-field:focus {
+  outline: none;
+}
+
+.search-field-wrapper:focus-within {
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .search-button {
+  position: relative;
   box-sizing: border-box;
   width: 160px;
   padding: 10px;
@@ -175,7 +181,18 @@ body {
 }
 
 .search-button:focus {
+  outline: none;
+}
+
+.search-button:focus::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   outline: 2px solid #af4fff;
+  outline-offset: 4px;
 }
 
 .page-navigation-container {
@@ -460,6 +477,7 @@ body {
 
 .slider-button:focus {
   outline: 2px solid #af4fff;
+  outline-offset: 1px;
 }
 
 .slider-paginator-list {
@@ -479,6 +497,7 @@ body {
 
 .slider-pagination-button {
   display: block;
+  position: relative;
   box-sizing: border-box;
   padding: 0;
   width: 12px;
@@ -505,7 +524,19 @@ body {
 
 .slider-pagination-button:focus,
 .slider-paginator-button-current:focus {
+  outline: none;
+}
+
+.slider-pagination-button:focus::after,
+.slider-paginator-button-current:focus::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   outline: 2px solid #af4fff;
+  outline-offset: 3px;
 }
 
 .slider-paginator-button-current {
@@ -944,14 +975,14 @@ body {
 
 .subscription-email {
   box-sizing: border-box;
-  font-family: "Rubik", "Arial", sans-serif;
   padding-left: 16px;
+  font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
-  background-color: rgba(255, 255, 255, 0);
   width: 557px;
+  min-height: 100%;
   color: #444444;
-  opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0);
   border: none;
   border-bottom: 3px solid #c4c4c4;
 }
@@ -960,16 +991,63 @@ body {
   display: block;
   font-size: 18px;
   line-height: 30px;
+  opacity: 0.5;
+}
+
+.subscription-email:focus {
+  background-color: #dcdcdc;
+  outline: none;
+}
+
+.subscription-email:invalid {
+  border-bottom-color: #ff3d3d;
+}
+
+.subscription-email:disabled {
+  opacity: 0.3;
 }
 
 .subscription-button {
   display: inline-block;
+  position: relative;
   box-sizing: border-box;
   width: 253px;
   padding: 15px 37px;
   font-size: 18px;
   line-height: 21px;
   border: 3px solid #c4c4c4;
+  background-color: transparent;
+}
+
+.subscription-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.subscription-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscription-button:focus {
+  outline: none;
+}
+
+.subscription-button:focus::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
+}
+
+/* Повесить класс, если нужно заблокировать кнопку */
+
+.subscription-button-disabled {
+  opacity: 0.3;
 }
 
 .subscription-info {
@@ -1128,7 +1206,18 @@ body {
 }
 
 .social-link:focus {
+  outline: none;
+}
+
+.social-link:focus::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .html-academy-link {
