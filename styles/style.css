@@ -97,6 +97,7 @@ body {
   cursor: pointer;
   margin-top: -20px;
   line-height: 0;
+  line-height: none;
 }
 
 .header-link:hover {
@@ -109,6 +110,10 @@ body {
 
 .header-link:focus {
   outline: 2px solid #af4fff;
+}
+
+.header-logo {
+  display: block;
 }
 
 .header-user-container {
@@ -1328,6 +1333,7 @@ body {
 
 .filters {
   width: 320px;
+  padding: 0 60px;
 }
 
 .filters-title,
@@ -1345,10 +1351,111 @@ body {
   margin-bottom: 60px;
 }
 
+.filters-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
 .group-title {
+  margin-bottom: 29px;
+  padding: 0;
+  padding-top: 12px;
   line-height: 20px;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+.range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 15px;
+  background-color: #dcdcdc;
+}
+
+.range-bar {
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 81px;
+  background-color: #000000;
+}
+
+.range-toggle {
+  position: absolute;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ebebeb;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.range-toggle:hover,
+.range-toggle:disabled {
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(235, 235, 235, 0.5);
+}
+
+.range-toggle:active {
+  background-color: #000000;
+}
+
+.range-toggle:focus::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: 2px solid #af4fff;
+  outline-offset: 4px;
+}
+
+.toggle-min {
+  top: -9px;
+  left: -9px;
+}
+
+.toggle-max {
+  top: -9px;
+  right: -9px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  align-items: flex-end;
+  line-height: 0;
+  margin-left: -15px;
+}
+
+.range-input {
+  font: inherit;
+  padding: 0;
+  width: 60px;
+  line-height: 18px;
+  background-color: transparent;
+  opacity: 1;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.filter-label {
+  font: inherit;
+  font-size: 15px;
+  opacity: 0.3;
+}
+
+.filter-label:not(:last-child) {
+  margin-right: 20px;
 }
 
 .checkbox-term,
