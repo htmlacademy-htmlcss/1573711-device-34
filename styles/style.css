@@ -1332,6 +1332,7 @@ body {
 }
 
 .filters {
+  box-sizing: border-box;
   width: 320px;
   padding: 0 60px;
 }
@@ -1352,19 +1353,33 @@ body {
 }
 
 .filters-group {
+  position: relative;
   border: none;
   padding: 0;
   margin: 0;
   margin-bottom: 35px;
 }
 
+.filters-group::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 0;
+  background-color: #000000;
+}
+
 .group-title {
-  margin-bottom: 29px;
+  margin-bottom: 20px;
   padding: 0;
   padding-top: 12px;
   line-height: 20px;
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+.filters-group:first-of-type .group-title {
+  margin-bottom: 30px;
 }
 
 .range-scale {
@@ -1396,11 +1411,14 @@ body {
 .range-toggle:hover,
 .range-toggle:disabled {
   border-color: rgba(0, 0, 0, 0.5);
-  background-color: rgba(235, 235, 235, 0.5);
 }
 
 .range-toggle:active {
   background-color: #000000;
+}
+
+.range-toggle:focus {
+  outline: none;
 }
 
 .range-toggle:focus::after {
@@ -1436,10 +1454,15 @@ body {
   padding: 0;
   width: 60px;
   line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
   background-color: transparent;
   opacity: 1;
   border: none;
   appearance: textfield;
+}
+
+.range-input:focus {
+  outline: none;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -1451,17 +1474,127 @@ body {
 .filter-label {
   font: inherit;
   font-size: 15px;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-label:focus-within {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+  opacity: 1;
 }
 
 .filter-label:not(:last-child) {
   margin-right: 20px;
 }
 
+.checkbox-group {
+  position: relative;
+  line-height: 19px;
+  padding: 0;
+  margin: 0;
+}
+
+.checkbox-group:not(:last-child) {
+  margin-bottom: 17.5px;
+}
+
+.checkbox-group:hover,
+.radio-group:hover {
+  opacity: 0.6;
+}
+
+.checkbox-group:active,
+.radio-group:active {
+  opacity: 0.3;
+}
+
+.checkbox-group:disabled,
+.radio-group:disabled {
+  opacity: 0.1;
+}
+
 .checkbox-term,
 .radio-term {
   font-size: 16px;
   line-height: 19px;
+  padding-left: 36px;
+}
+
+.checkbox-mark,
+.radio-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+}
+
+.checkbox-input[type="checkbox"]:checked + .checkbox-mark {
+  position: absolute;
+  background-image: url("../images/checkbox-mark.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-color: #000000;
+}
+
+.radio-group {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  line-height: 19px;
+}
+
+.radio-group:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.radio-mark {
+  border-radius: 50%;
+}
+
+.radio-input[type="radio"]:checked + .radio-mark {
+  border-color: #000000;
+}
+
+.radio-input[type="radio"]:checked + .radio-mark::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.filters-button {
+  box-sizing: border-box;
+  padding: 10px 48px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background: linear-gradient(to bottom, transparent 40%, #ffe16f 40%, #ffe16f 60%, transparent 60%, transparent 100%);
+  border: none;
+  cursor: pointer;
+  background-position: center;
+	background-size: 100% 100%;
+	transition: background-size 0.2s ease;
+}
+
+.filters-button:hover {
+  background-size: 100% 500%;
+}
+
+.filters-button:active {
+  background: #ffc700;
+}
+
+.filters-button:focus {
+  opacity: 1;
+  outline: 2px solid #af4fff;
 }
 
 .sort-wrapper {
@@ -1476,17 +1609,46 @@ body {
 }
 
 .cards-title,
-.cards-popular,
+.select,
 .cards-sort {
   margin: 0;
 }
 
-.cards-popular {
+.select {
   position: relative;
   padding-right: 32px;
 }
 
-.cards-popular::after {
+.select-control {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  line-height: 30px;
+  appearance: none;
+}
+
+.select-control:hover {
+  opacity: 0.6;
+}
+
+.select-control:active {
+  opacity: 0.3;
+}
+
+.select-control:focus {
+  outline: none;
+}
+
+.select:focus-within {
+  outline: 2px solid #af4fff;
+  outline-offset: 3px;
+}
+
+.select-control:disabled {
+  opacity: 0.1;
+}
+
+.select::after {
   content: "";
   position: absolute;
   width: 6px;
@@ -1503,16 +1665,33 @@ body {
   display: flex;
 }
 
-.cards-sort-toggle-up,
-.cards-sort-toggle-down {
+.sort-button {
   padding: 10px;
-  opacity: 0.3;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
-.cards-sort-toggle-down {
+.sort-button svg {
+  opacity: 0.2;
+}
+
+.sort-button-down {
   transform: rotate(180deg);
 }
 
+.sort-button:hover svg {
+  opacity: 0.5;
+}
+
+.sort-button:active svg {
+  opacity: 1;
+}
+
+.sort-button:focus {
+  outline: 2px solid #af4fff;
+
+}
 
 .cards-wrapper {
   padding-bottom: 78px;

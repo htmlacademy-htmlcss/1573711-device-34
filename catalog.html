@@ -123,34 +123,41 @@
               <legend class="group-title">Цвет</legend>
               <p class="checkbox-group">
                 <label class="checkbox-term" for="black-color">Черный</label>
-                <input class="checkbox-input" type="checkbox" name="black" value="black" id="black-color" checked>
+                <input class="visually-hidden checkbox-input" type="checkbox" name="black" value="black" id="black-color" checked>
+                <span class="checkbox-mark"></span>
               </p>
               <p class="checkbox-group">
                 <label class="checkbox-term" for="white-color">Белый</label>
-                <input class="checkbox-input" type="checkbox" name="white" value="white" id="white-color" checked>
+                <input class="visually-hidden checkbox-input" type="checkbox" name="white" value="white" id="white-color" checked>
+                <span class="checkbox-mark"></span>
               </p>
               <p class="checkbox-group">
                 <label class="checkbox-term" for="blue-color">Синий</label>
-                <input class="checkbox-input" type="checkbox" name="blue" value="blue" id="blue-color">
+                <input class="visually-hidden checkbox-input" type="checkbox" name="blue" value="blue" id="blue-color">
+                <span class="checkbox-mark"></span>
               </p>
               <p class="checkbox-group">
                 <label class="checkbox-term" for="red-color">Красный</label>
-                <input class="checkbox-input" type="checkbox" name="red" value="red" id="red-color">
+                <input class="visually-hidden checkbox-input" type="checkbox" name="red" value="red" id="red-color">
+                <span class="checkbox-mark"></span>
               </p>
               <p class="checkbox-group">
                 <label class="checkbox-term" for="pink-color">Розовый</label>
-                <input class="checkbox-input" type="checkbox" name="pink" value="pink" id="pink-color">
+                <input class="visually-hidden checkbox-input" type="checkbox" name="pink" value="pink" id="pink-color">
+                <span class="checkbox-mark"></span>
               </p>
             </fieldset>
             <fieldset class="filters-group">
               <legend class="group-title">Bluetooth</legend>
               <p class="radio-group">
                 <label class="radio-term" for="bluetooth-true">Есть</label>
-                <input type="radio" value="true" name="radio-bluetooth" id="bluetooth-true" checked>
+                <input class="radio-input visually-hidden" type="radio" name="radio-bluetooth" id="bluetooth-true" checked>
+                <span class="radio-mark"></span>
               </p>
               <p class="radio-group">
                 <label class="radio-term" for="bluetooth-false">Нет</label>
-                <input type="radio" value="false" name="radio-bluetooth" id="bluetooth-false">
+                <input class="radio-input visually-hidden" type="radio" name="radio-bluetooth" id="bluetooth-false">
+                <span class="radio-mark"></span>
               </p>
             </fieldset>
             <button class="filters-button" type="button">Показать</button>
@@ -162,10 +169,20 @@
         <section class="cards">
           <div class="sort-wrapper">
             <h3 class="cards-title">Сортировка:</h3>
-            <p class="cards-popular">Популярные </p>
+            <div class= "select">
+              <select class="select-control" aria-label="Сортировка">
+                <option value="popular">Популярные</option>
+                <option value="cheap">Дешёвые</option>
+                <option value="expensive">Дорогие</option>
+              </select>
+            </div>
             <div class="cards-sort">
-              <svg class="cards-sort-toggle-up" alt="Сортировка от меньшего к большему." width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="#000"/></svg>
-              <svg class="cards-sort-toggle-down" alt="Сортировка от большего к меньшему." width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="#000"/></svg>
+              <button class="sort-button sort-button-up">
+                <svg alt="Сортировка от меньшего к большему." width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="#000"/></svg>
+              </button>
+              <button class="sort-button sort-button-down">
+                <svg alt="Сортировка от большего к меньшему." width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" fill="#000"/></svg>
+              </button>
             </div>
           </div>
           <div class="cards-wrapper">
