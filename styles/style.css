@@ -1592,6 +1592,14 @@ body {
   line-height: 20px;
 }
 
+.delivery-number-tooltip {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  bc
+}
+
 .group-number-wrapper {
   display: flex;
 }
