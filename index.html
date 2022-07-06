@@ -417,42 +417,47 @@
         </div>
       </div>
     </footer>
-    <div class="modal-container">
+
+    <div class="modal-container modal-container-close">
       <div class="modal-delivery">
         <h2 class="modal-title">Доставка под заказ</h2>
-        <button class="modal-close">
+        <button class="modal-close" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="modal-form-group group-name">
+          <div class="modal-form-group group-name">
             <label class="modal-form-label" for="delivery-name">Ваше имя:</label>
             <input class="modal-form-input input-name" type="text" id="delivery-name" placeholder="Введите имя" required>
             <span class="delivery-help">Добавьте имя</span>
-          </p>
-          <p class="modal-form-group group-email">
+          </div>
+          <div class="modal-form-group group-email">
             <label class="modal-form-label" for="delivery-email">Ваш e-mail:</label>
             <input class="modal-form-input input-email" type="email" id="delivery-email" placeholder="Введите e-mail" required>
             <span class="delivery-help">Забавный у вас адрес</span>
-          </p>
-          <p class="modal-form-group group-products">
+          </div>
+          <div class="modal-form-group group-products">
             <label class="modal-form-label" for="delivery-products">Что нужно привезти:</label>
             <input class="modal-form-input input-products" type="text" id="delivery-products" placeholder="В свободной форме" required>
-          </p>
-          <p class="modal-form-group group-number">
-            <label class="modal-form-label" for="delivery-number">Количество:</label>
-            <button class="delivery-number-tooltip">
-              <span class="visually-hidden">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
-            </button>
+          </div>
+          <div class="modal-form-group group-number">
+            <span class="modal-form-label modal-form-icon">
+              <label class="modal-form-label" for="delivery-number">Количество:</label>
+              <button class="delivery-number-tooltip" type="button" aria-labelledby="tooltip-label">
+                <span class="visually-hidden">Подробнее</span>
+              </button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+            </span>
             <div class="group-number-wrapper">
+              <input class="modal-form-input input-number" type="number" id="delivery-number" value="1" min="1" required>
               <button class="delivery-amount delivery-amount-less">
                 <span class="visually-hidden">Меньше товаров</span>
               </button>
-              <input class="modal-form-input input-number" type="number" id="delivery-number" value="1" required>
               <button class="delivery-amount delivery-amount-more">
                 <span class="visually-hidden">Больше товаров</span>
               </button>
             </div>
-          </p>
+          </div>
+          <button class="modal-submit" type="submit">Отправить</button>
         </form>
       </div>
     </div>
