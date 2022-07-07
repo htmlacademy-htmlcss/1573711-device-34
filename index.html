@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
@@ -25,13 +26,13 @@
           <ul class="user-navigation-list">
             <li class="user-navigation-item">
               <a class="user-navigation-link" href="#">
-                <svg aria-hidden="true" focusable="false" class="user-navigation-sign" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12.8h13a6.3 6.3 0 0 0-4.7-5.5c1-.6 1.7-1.7 1.7-3C10 2.3 8.4.8 6.5.8A3.5 3.5 0 0 0 3 4.3c0 1.3.7 2.4 1.7 3A6.3 6.3 0 0 0 0 12.8Z" fill="#000"/></svg>
+                <img class="user-navigation-sign" src="./images/login-icon.svg" alt="Войти." width="15px" height="12px">
                 Войти
               </a>
             </li>
             <li class="user-navigation-item">
               <a class="user-navigation-link" href="#">
-                <svg aria-hidden="true" focusable="false" class="user-navigation-change" width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 .4H4v12h2V.4ZM2 4.4H0v8h2v-8ZM10 3.4H8v9h2v-9Z" fill="#000"/></svg>
+                <img class="user-navigation-change" src="./images/change.svg" alt="Сравнить." width="10px" height="13px">
                 Сравнить
               </a>
             </li>
@@ -39,11 +40,11 @@
               <a class="user-navigation-link basket" href="#">
                 <p class="user-navigation-wrapper">
                   <span class="user-navigation-number">2</span>
-                  <svg aria-hidden="true" focusable="false" class="user-navigation-basket" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5.4-3.5.2-3.2-5L8 .5c-.2 0-.5 0-.6.3L4.2 5.6H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1 1.4 1h9.4c.7 0 1.2-.3 1.4-1l1.9-7v-.1c0-.4-.3-.8-.7-.8ZM8 2.3l2.2 3.2H5.9L8 2.3Z" fill="#000"/></svg>
+                  <img class="user-navigation-basket" src="./images/basket.svg" alt="Корзина." width="16px" height="14px">
                   Корзина
                 </p>
               </a>
-              <div class="basket-popover hidden">
+              <div class="basket-popover basket-popover-close">
                 <ul class="basket-list">
                   <li class="basket-item">
                     <a class="basket-link" href="#">
@@ -146,7 +147,7 @@
               </dl>
             </div>
           </div>
-          <!-- <div class="slider-item">
+          <div class="slider-item hidden">
             <img class="slider-image" src="images/slider/slider-2.png" width="560" height="560" alt="Фитнес-браслет.">
             <div class="slider-wrapper">
               <p class="slider-number">02</p>
@@ -162,7 +163,7 @@
               </dl>
             </div>
           </div>
-          <div class="slider-item">
+          <div class="slider-item hidden">
             <img class="slider-image" src="images/slider/slider-3.png" width="560" height="560" alt="Три палки для селфи.">
             <div class="slider-wrapper">
               <p class="slider-number">03</p>
@@ -185,7 +186,7 @@
                 </div>
               </dl>
             </div>
-          </div> -->
+          </div>
           <ul class="slider-arrows">
             <li class="slider-arrow">
               <button class="slider-button slider-prev" type="button">
@@ -283,14 +284,14 @@
               <h3 class="features-title">Доставка</h3>
               <p class="features-text">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно! Ведь<br> мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <!-- <li class="features-item features-item-guarantee">
+            <li class="features-item features-item-guarantee hidden">
               <h3 class="features-title">Гарантия</h3>
               <p class="features-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
-            <li class="features-item features-item-credit">
+            <li class="features-item features-item-credit hidden">
               <h3 class="features-title">Кредит</h3>
               <p class="features-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
-            </li> -->
+            </li>
           </ul>
         </div>
       </section>

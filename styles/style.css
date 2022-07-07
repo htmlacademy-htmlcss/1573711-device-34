@@ -54,10 +54,6 @@ body {
   overflow: hidden;
 }
 
-.hidden {
-  display: none;
-}
-
 .main-container {
   flex-grow: 1;
 }
@@ -102,6 +98,8 @@ body {
   cursor: pointer;
   margin-top: -20px;
   line-height: 0;
+  width: 145px;
+  height: 36px;
 }
 
 .header-link:hover {
@@ -222,8 +220,7 @@ body {
   list-style-type: none;
 }
 
-.user-navigation-item:focus,
-.user-navigation-item:focus-visible {
+.user-navigation-item:focus {
   outline: 3px solid #af4fff;
 }
 
@@ -276,7 +273,7 @@ body {
   margin: 0;
   z-index: 1;
 }
-.user-navigation-wrapper:focus {
+.user-navigation-wrapper:focus-within {
   outline: 3px solid #af4fff;
 }
 
@@ -285,6 +282,15 @@ body {
   top: 5px;
   left: 15px;
   z-index: -1;
+}
+
+.basket-popover-close {
+  display: none;
+}
+
+.basket:focus + .basket-popover,
+.basket:active + .basket-popover {
+  display: block;
 }
 
 .basket-popover {
@@ -696,6 +702,7 @@ body {
 }
 
 .slider-button {
+  padding: 20px;
   position: absolute;
 }
 
@@ -2495,4 +2502,8 @@ body {
 
 .cards-pagination-link:disabled {
   opacity: 0.1;
+}
+
+.hidden {
+  display: none;
 }
