@@ -220,6 +220,10 @@ body {
   list-style-type: none;
 }
 
+.user-navigation-item:last-of-type:focus-within > .basket-popover {
+  display: block;
+}
+
 .user-navigation-item:focus {
   outline: 3px solid #af4fff;
 }
@@ -466,6 +470,10 @@ body {
   position: relative;
 }
 
+.header-catalog-container:focus-within > .popover-catalog {
+  display: block;
+}
+
 .header-catalog {
   display: block;
   position: relative;
@@ -509,6 +517,10 @@ body {
 .header-catalog:focus + .popover-catalog,
 .header-catalog:active + .popover-catalog {
   display: block;
+}
+
+.popover-catalog-close {
+  display: none;
 }
 
 .popover-catalog {
@@ -702,7 +714,6 @@ body {
 }
 
 .slider-button {
-  padding: 20px;
   position: absolute;
 }
 
@@ -2130,6 +2141,16 @@ body {
   border-color: #000000;
 }
 
+.checkbox-input:focus + .checkbox-mark::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  outline: 2px solid #af4fff;
+}
+
 .radio-group {
   position: relative;
   margin: 0;
@@ -2158,6 +2179,16 @@ body {
   height: 8px;
   background-color: #000000;
   border-radius: 50%;
+}
+
+.radio-input:focus + .radio-mark::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  outline: 2px solid #af4fff;
 }
 
 .filters-button {
@@ -2480,20 +2511,19 @@ body {
 .cards-pagination-link {
   padding: 10px 15px;
   text-decoration: none;
-  color: #444444;
-  opacity: 0.3;
+  color: rgba(68, 68, 68, 0.3);
 }
 
 .cards-pagination-current {
-  opacity: 0.6;
+  color: rgba(68, 68, 68, 0.6);
 }
 
 .cards-pagination-link:hover {
-  opacity: 1;
+  color: rgba(68, 68, 68, 1);
 }
 
 .cards-pagination-link:active {
-  opacity: 0.1;
+  color: rgba(68, 68, 68, 0.1);
 }
 
 .cards-pagination-link:focus {
