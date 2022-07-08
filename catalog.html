@@ -21,10 +21,10 @@
           <form class="header-search" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="header-search">Поиск</label>
             <div class="search-field-wrapper">
-              <input class="search-field" type="text" name="header-search" id="header-search"
+              <input class="search-field" type="search" name="search" id="header-search"
                 placeholder="Поиск по сайту" value="Текст поиска">
             </div>
-            <button class="search-button" type="button">Найти</button>
+            <button class="search-button" type="submit">Найти</button>
           </form>
           <ul class="user-navigation-list">
             <li class="user-navigation-item">
@@ -224,13 +224,13 @@
               <legend class="group-title">Bluetooth</legend>
               <p class="radio-group">
                 <label class="radio-term" for="bluetooth-true">Есть</label>
-                <input class="radio-input visually-hidden" type="radio" name="radio-bluetooth" id="bluetooth-true"
+                <input class="radio-input visually-hidden" type="radio" name="radio-bluetooth" value="yes" id="bluetooth-true"
                   checked>
                 <span class="radio-mark"></span>
               </p>
               <p class="radio-group">
                 <label class="radio-term" for="bluetooth-false">Нет</label>
-                <input class="radio-input visually-hidden" type="radio" name="radio-bluetooth" id="bluetooth-false">
+                <input class="radio-input visually-hidden" type="radio" name="radio-bluetooth" value="no" id="bluetooth-false">
                 <span class="radio-mark"></span>
               </p>
             </fieldset>
