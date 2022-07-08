@@ -911,6 +911,7 @@ body {
   margin-bottom: 68px;
   padding-bottom: 137px;
   display: flex;
+  background-color: inherit;
 }
 
 .features-slider {
@@ -1221,14 +1222,30 @@ body {
   transition: background-size 0.2s ease;
 }
 
+
+/* .page-footer {
+  min-width: 100%;
+  background-color: #444444;
+  color: #ffffff;
+}
+
+.footer-container {
+  position: relative;
+  width: 1160px;
+  padding: 62px 0 57px;
+  margin: 0 auto;
+  background-color: inherit; */
+
 .subscription {
-  padding: 64px 0 56px;
+  min-width: 100%;
   background-color: #f0f0f0;
 }
 
 .subscription-container {
+  padding: 64px 0 56px;
   width: 1160px;
   margin: 0 auto;
+  background-color: inherit;
 }
 
 .subscription-wrapper {
@@ -1367,6 +1384,7 @@ body {
   width: 1160px;
   padding: 62px 0 57px;
   margin: 0 auto;
+  background-color: inherit;
 }
 
 .footer-container::after {
@@ -1974,6 +1992,7 @@ body {
   padding-top: 19px;
   margin: 0 auto;
   display: flex;
+  background-color: inherit;
 }
 
 .filters {
