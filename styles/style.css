@@ -27,6 +27,7 @@ html {
 }
 
 body {
+  min-width: 1440px;
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -114,7 +115,7 @@ body {
 }
 
 .header-logo {
-  display: block;
+  object-fit: contain;
   width: 145px;
   height: 36px;
 }
@@ -229,10 +230,6 @@ body {
   list-style-type: none;
 }
 
-.user-navigation-item:last-of-type:focus-within > .basket-popover {
-  display: block;
-}
-
 .user-navigation-item:focus {
   outline: 3px solid #af4fff;
 }
@@ -329,6 +326,11 @@ body {
   position: absolute;
 }
 
+
+.user-navigation-item:last-of-type:focus-within > .basket-popover {
+  display: block;
+}
+
 .basket-list {
   margin: 0;
   padding: 0;
@@ -366,7 +368,7 @@ body {
 }
 
 .basket-image {
-  display: block;
+  object-fit: contain;
   margin-right: 23px;
 }
 
@@ -705,6 +707,8 @@ body {
 }
 
 .slider-next {
+  top: 61px;
+  left: 540px;
   transform: rotate(180deg);
 }
 
@@ -742,11 +746,6 @@ body {
 .slider-prev {
   top: 61px;
   left: 30px;
-}
-
-.slider-next {
-  top: 61px;
-  left: 540px;
 }
 
 .slider-button:hover {
@@ -1504,7 +1503,7 @@ body {
   background-color: #ffc700;
 }
 
-.social-link:active path {
+.social-link:active .social-logo {
   fill-opacity: 0.3;
 }
 
@@ -1582,8 +1581,8 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  top: 75px;
-  right: 68px;
+  top: 74px;
+  right: 70px;
 }
 
 .modal-close::before,
@@ -1591,7 +1590,7 @@ body {
   content: "";
   position: absolute;
   top: 11px;
-  right: -1px;
+  right: -3px;
   height: 4px;
   width: 32px;
   background-color: #000000;
@@ -1692,10 +1691,6 @@ body {
 
 .group-products {
   grid-column: 1 / 3;
-}
-
-.modal-submit {
-  grid-column: 1 / -1;
 }
 
 .delivery-help {
@@ -1864,6 +1859,7 @@ body {
 
 .modal-submit {
   width: 200px;
+  grid-column: 1 / -1;
   padding: 10px 15px;
   border: none;
   font-size: 18px;
@@ -1945,7 +1941,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.breadcrumps-item:last-child:after {
+.breadcrumps-item:last-child::after {
   content: none;
 }
 
@@ -2368,7 +2364,6 @@ body {
 
 .sort-button:focus {
   outline: 2px solid #af4fff;
-
 }
 
 .cards-wrapper {
@@ -2431,6 +2426,7 @@ body {
 }
 
 .cards-image {
+  max-width: 100%;
   object-fit: contain;
   display: block;
   margin-bottom: 32px;
@@ -2570,6 +2566,10 @@ body {
 
 .cards-pagination-button:focus {
   outline: 2px solid #af4fff;
+}
+
+.cards-pagination-disabled {
+  opacity: 0.1;
 }
 
 .cards-pagination-item {
