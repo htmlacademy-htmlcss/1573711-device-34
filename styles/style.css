@@ -27,7 +27,6 @@ html {
 }
 
 body {
-  min-width: 1440px;
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -61,8 +60,8 @@ body {
 .slider-link,
 .features-slider-link,
 .delivery-link,
-.about-button,
-.contacts-button,
+.about-link,
+.contacts-link,
 .subscription-button,
 .footer-navigation-link,
 .filters-button,
@@ -149,12 +148,20 @@ body {
   background-position: 14px 9px;
 }
 
-.search-field:disabled {
-  opacity: 0.3;
+.search-field:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-field:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .search-field:focus {
   outline: none;
+}
+
+.search-field:disabled {
+  opacity: 0.3;
 }
 
 .search-field-wrapper:focus-within {
@@ -564,7 +571,7 @@ body {
 }
 
 .catalog-link {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: #000000;
 }
@@ -579,6 +586,10 @@ body {
 
 .catalog-link:focus {
   outline: 2px solid #af4fff;
+}
+
+.catalog-link-current {
+  border-bottom: 2px solid #000000;
 }
 
 .navigation-list {
@@ -613,6 +624,10 @@ body {
 
 .navigation-link:focus {
   outline: 2px solid #af4fff;
+}
+
+.navigation-link-current {
+  box-shadow: inset 0 -3px #000000;
 }
 
 .navigation-item:not(:last-child) {
@@ -1023,6 +1038,7 @@ body {
   line-height: 23px;
   letter-spacing: 0.2em;
   text-align: center;
+  background-color: #f0f0f0;
 }
 
 .delivery-link::before {
@@ -1127,27 +1143,27 @@ body {
   border-radius: 50%;
 }
 
-.about-button {
+.about-link {
   display: inline-block;
-  padding: 10px 25px;
+  padding: 10px 23px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffe16f 40%, #ffe16f 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
   background-position: center;
   background-size: 100% 100%;
   transition: background-size 0.2s ease;
 }
 
-.about-button:hover,
-.contacts-button:hover {
+.about-link:hover,
+.contacts-link:hover {
   background-size: 100% 500%;
 }
 
-.about-button:active,
-.contacts-button:active {
+.about-link:active,
+.contacts-link:active {
   background: #ffcc33;
 }
 
-.about-button:focus,
-.contacts-button:focus {
+.about-link:focus,
+.contacts-link:focus {
   outline: 2px solid #af4fff;
 }
 
@@ -1197,7 +1213,7 @@ body {
   outline: 2px solid #af4fff;
 }
 
-.contacts-button {
+.contacts-link {
   display: inline-block;
   padding: 10px 34px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, #ffe16f 40%, #ffe16f 60%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
@@ -1266,6 +1282,14 @@ body {
   font-size: 18px;
   line-height: 30px;
   opacity: 0.5;
+}
+
+.subscription-email:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.subscription-email:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .subscription-email:focus {
